@@ -4,6 +4,7 @@
 public class Book {
     private String name;
     private String author;
+    private boolean status;
 
 
     public Book(String name, String author, boolean status) {
@@ -12,7 +13,8 @@ public class Book {
         this.status = status;
     }
 
-    //
+    //getter and setter
+
     public String getName() {
         return name;
     }
@@ -29,22 +31,22 @@ public class Book {
         this.author = author;
     }
 
-    public String getStatus() {
-        return author;
+    public boolean getStatus() {
+        return status;
     }
 
-    public void setStatus(String author) {
-        this.author = author;
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 
-    //
+    //overriding
+
     @Override
     public String toString() {
         return name + "," + author + ", " + status;
     }
 
-    //
-    boolean status = true;
+    //status()
 
     public boolean status() {
         if (status == true) {
@@ -57,14 +59,6 @@ public class Book {
         return status;
     }
 
-
-    /*public String status(){
-        if (status == 1){
-           return "On Shelf";
-        }else if (status == 2){
-            return "Checked Out " + dueDate;
-        }
-    }*/
 
 
 }
