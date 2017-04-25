@@ -16,24 +16,7 @@ public class LibraryMain {
         int choice = 1;
         String choice1 = "yes";
         Book book = new Book("name", "author", true);
-
-        ArrayList<Book> collection = new ArrayList<Book>();
-        collection.add(new Book("The Elegant Universe", "Brian Green", true));
-        collection.add(new Book("The Bluest Eye", "Toni Morrison", true));
-        collection.add(new Book("My House", "Nikki Giovanni", true));
-        collection.add(new Book("We Should All Be Feminists", "Chimamanda Ngozi Adichie", true));
-        collection.add(new Book("A Game of Thrones", "George R. R. Martin", true));
-        collection.add(new Book("Harry Potter", "J.K. Rowling", true));
-        collection.add(new Book("Martin The Warrior", "Brian Jacques", true));
-        collection.add(new Book("Lord of the Rings", "J.R.R. Tolkien", true));
-        collection.add(new Book("Ponniyen Selvan", "Kalki", true));
-        collection.add(new Book("Thanneer Desam", "Vairamuthu", true));
-        collection.add(new Book("Karuvaachi Kaviyam ", "Vairamuthu", true));
-        collection.add(new Book("Udaiyar", "Balakumaran", true));
-
-
-        collection.get(0).setStatus(true);
-
+        BookCollection bookCollection = new BookCollection();
 
         System.out.println("Welcome to the SJL Library");
 
@@ -59,13 +42,13 @@ public class LibraryMain {
 
                     break;
                 case 4:
-
+                    bookCollection.changeStatus("book", "author", false);
                     break;
                 case 5:
-
+                    bookCollection.changeStatus("book", "author", true)
                     break;
                 case 6:
-                    File.writeToFile(scan);
+                    bookCollection.addToList("name", "author", true);
                     break;
             }
 
