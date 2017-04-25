@@ -1,3 +1,7 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 /**
@@ -5,9 +9,6 @@ import java.util.Scanner;
  */
 public class LibraryMain {
     public static void main(String[] args) {
-
-        System.out.println("Hello world!");
-        System.out.println("Saritha");
 
         Scanner scan = new Scanner(System.in);
         int choice = 1;
@@ -23,19 +24,28 @@ public class LibraryMain {
             System.out.println("3. Search by Author");
             System.out.println("4. Checkout a Book");
             System.out.println("5. Return a Book");
+            System.out.println("6. Add a Book to the Collection");
             choice = scan.nextInt();
             scan.nextLine();
 
             switch (choice){
                 case 1:
+                    File.readFromFile();
                     break;
                 case 2:
+
                     break;
                 case 3:
+
                     break;
                 case 4:
+
                     break;
                 case 5:
+
+                    break;
+                case 6:
+                    File.writeToFile(scan);
                     break;
             }
 
@@ -43,8 +53,7 @@ public class LibraryMain {
             choice1 = scan.nextLine();
         } while (choice1.equalsIgnoreCase("yes"));
         System.out.println("Thank you. Please come again!");
-
-
-
     }
+
+
 }
