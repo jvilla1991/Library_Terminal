@@ -32,12 +32,12 @@ public class File {
     public static void writeToFile(Scanner scnr) {
         scnr.nextLine();
         System.out.println("Please enter a book name: ");
-        String country = scnr.nextLine();
+        String book = scnr.nextLine();
         Path writePath = Paths.get("books.txt");
-        java.io.File countryFiles = writePath.toFile();
+        java.io.File bookFiles = writePath.toFile();
 
         try {
-            PrintWriter out = new PrintWriter(new FileOutputStream(countryFiles, true));
+            PrintWriter out = new PrintWriter(new FileOutputStream(bookFiles, true));
             out.println(book);
             out.close();
         } catch (FileNotFoundException e) {
