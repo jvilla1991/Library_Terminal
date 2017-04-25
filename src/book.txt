@@ -1,1 +1,4 @@
-"Gone With the Wind"
+"A Game of Thrones", "George R. R. Martin"
+"Harry Potter", "J.K. Rowling"
+"Martin The Warrior", "Brian Jacques"
+"Lord of the Rings", "J.R.R. Tolkien"
