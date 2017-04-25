@@ -45,7 +45,7 @@ public class LibraryMain {
                     bookCollection.changeStatus("book", "author", false);
                     break;
                 case 5:
-                    bookCollection.changeStatus("book", "author", true)
+                    bookCollection.changeStatus("book", "author", true);
                     break;
                 case 6:
                     bookCollection.addToList("name", "author", true);
