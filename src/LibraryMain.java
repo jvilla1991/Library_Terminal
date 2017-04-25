@@ -6,8 +6,7 @@ import java.util.Scanner;
 public class LibraryMain {
     public static void main(String[] args) {
 
-        System.out.println("Hello world!");
-        System.out.println("Saritha");
+
 
         Scanner scan = new Scanner(System.in);
         int choice = 1;
@@ -43,6 +42,7 @@ public class LibraryMain {
             choice1 = scan.nextLine();
         } while (choice1.equalsIgnoreCase("yes"));
         System.out.println("Thank you. Please come again!");
+
 
 
 
