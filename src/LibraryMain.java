@@ -43,8 +43,9 @@ public class LibraryMain {
                 case 1:
                     ArrayList<Book> readFromFile = FileHandler.readFromFile();
                     for (int i = 0; i < readFromFile.size(); i++) {
-                        Book b = readFromFile.get(i);
-                        System.out.println(b);
+                        String b = readFromFile.get(i).getName();
+                        String a = readFromFile.get(i).getAuthor();
+                        System.out.println("\"" + b + "\"" + " by " + a);
                     }
                     FileHandler.readFromFile();
                     System.out.println();
