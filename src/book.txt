@@ -2,3 +2,11 @@
 "Harry Potter", "J.K. Rowling"
 "Martin The Warrior", "Brian Jacques", true
 "Lord of the Rings", "J.R.R. Tolkien", true
+"The Elegant Universe", "Brian Green", true
+"The Bluest Eye", "Toni Morrison", true
+"My House", "Nikki Giovanni", true
+"We Should All Be Feminists", "Chimamanda Ngozi Adichie", true
+"Ponniyen Selvan", "Kalki", true
+"Thanneer Desam", "Vairamuthu", true
+"Karuvaachi Kaviyam ", "Vairamuthu", true
+"Udaiyar", "Balakumaran", true

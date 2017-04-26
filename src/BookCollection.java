@@ -3,6 +3,7 @@ import java.util.ArrayList;
 /**
  * Created by LheaJLove on 4/25/2017.
  */
+/*
 public class BookCollection {
 
 
@@ -38,3 +39,4 @@ public class BookCollection {
 
 
 }
+*/
