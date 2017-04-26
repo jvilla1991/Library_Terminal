@@ -1,3 +1,8 @@
+//https://codereview.stackexchange.com/questions/33148/book-program-with-arraylist
+//http://www.dreamincode.net/forums/topic/208224-java-library-system-implementing-arrays-for-books-and-library-class/
+//http://forums.devshed.com/java-help-9/java-library-system-borrow-books-search-books-overdue-books-slight-812178.html
+//http://www.cs.colostate.edu/~cs161/Fall12/labs/lab2/libsearch.html
+
 /**
  * Created by Saritha on 4/25/2017.
  */
