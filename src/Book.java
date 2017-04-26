@@ -9,10 +9,10 @@
 public class Book {
     private String name;
     private String author;
-    private boolean status;
+    private String status;
 
 
-    public Book(String name, String author, boolean status) {
+    public Book(String name, String author, String status) {
         this.name = name;
         this.author = author;
         this.status = status;
@@ -36,11 +36,11 @@ public class Book {
         this.author = author;
     }
 
-    public boolean getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
@@ -53,15 +53,15 @@ public class Book {
 
     //status()
 
-    public boolean status() {
-        if (status == true) {
-            System.out.println("Due Date");
+    public void  status() {
+        if (status.equalsIgnoreCase("true")) {
+            System.out.println("This book is checked out.The Due Date is: ");
 
-        } else if (status != true) {
-            System.out.println("Stays on Shelf");
+        } else if (status.equalsIgnoreCase("false")) {
+            System.out.println("On Shelf! Do you want to check out?: ");
         }
 
-        return status;
+
     }
 
 
