@@ -43,7 +43,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return name + "," + author + ", " + status;
+        return name + "," + author + "," + status;
     }
 
     //status()

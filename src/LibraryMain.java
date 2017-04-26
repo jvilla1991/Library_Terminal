@@ -15,13 +15,15 @@ import java.util.Scanner;
  */
 public class LibraryMain {
     public static void main(String[] args) {
-        
+
+
         Scanner scan = new Scanner(System.in);
         int choice = 1;
         String choice1 = "yes";
         Book book = new Book("name", "author", true);
 
-        BookCollection bookCollection = new BookCollection();
+
+        /*BookCollection bookCollection = new BookCollection();*/
 
 
         System.out.println("Welcome to the SJL Library");
@@ -39,7 +41,13 @@ public class LibraryMain {
 
             switch (choice){
                 case 1:
-                    File.readFromFile();
+                    ArrayList<Book> readFromFile = FileHandler.readFromFile();
+                    for (int i = 0; i < readFromFile.size(); i++) {
+                        Book b = readFromFile.get(i);
+                        System.out.println(b);
+                    }
+                    FileHandler.readFromFile();
+                    System.out.println();
                     break;
                 case 2:
 
@@ -48,13 +56,13 @@ public class LibraryMain {
 
                     break;
                 case 4:
-                    bookCollection.changeStatus("book", "author", false);
+                    /*bookCollection.changeStatus("book", "author", false);*/
                     break;
                 case 5:
-                    bookCollection.changeStatus("book", "author", true);
+                    /*bookCollection.changeStatus("book", "author", true);*/
                     break;
                 case 6:
-                    bookCollection.addToList("name", "author", true);
+                    FileHandler.writeToFile(scan);
                     break;
             }
 
