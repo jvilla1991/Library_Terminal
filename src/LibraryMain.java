@@ -1,7 +1,11 @@
+<<<<<<< Updated upstream
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+=======
+import java.lang.reflect.Array;
+>>>>>>> Stashed changes
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -12,11 +16,18 @@ public class LibraryMain {
     public static void main(String[] args) {
 
 
+<<<<<<< Updated upstream
+=======
+        ArrayList<Book> catalog = File.readFromFile(); // returns catalog array list from File class, pass this to a function.
+>>>>>>> Stashed changes
         Scanner scan = new Scanner(System.in);
         int choice = 1;
         String choice1 = "yes";
         Book book = new Book("name", "author", true);
+<<<<<<< Updated upstream
         BookCollection bookCollection = new BookCollection();
+=======
+>>>>>>> Stashed changes
 
         System.out.println("Welcome to the SJL Library");
 

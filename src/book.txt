@@ -1,4 +1,4 @@
-"A Game of Thrones", "George R. R. Martin"
+"A Game of Thrones", "George R. R. Martin", true
 "Harry Potter", "J.K. Rowling"
-"Martin The Warrior", "Brian Jacques"
-"Lord of the Rings", "J.R.R. Tolkien"
+"Martin The Warrior", "Brian Jacques", OUT: Due date: April 29th, 2017
+"Lord of the Rings", "J.R.R. Tolkien", On Sheld
