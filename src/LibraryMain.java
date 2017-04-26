@@ -5,7 +5,7 @@ import java.util.Scanner;
  */
 public class LibraryMain {
     public static void main(String[] args) {
-        
+
         Scanner scan = new Scanner(System.in);
         int choice = 1;
         String choice1 = "yes";
