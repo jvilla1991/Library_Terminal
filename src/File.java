@@ -1,6 +1,7 @@
 import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -8,7 +9,8 @@ import java.util.Scanner;
  */
 public class File {
 
-    public static void readFromFile() {
+    public static ArrayList<Book> readFromFile() {
+        ArrayList<Book> catalog = new ArrayList<Book>(); // new array list
         Path filePath = Paths.get("books.txt");
         java.io.File textFile = filePath.toFile();
         try {
@@ -17,9 +19,10 @@ public class File {
             try {
                 String line = reader.readLine();
 
-                while (line != null) {
-                    System.out.println(line);
-                    line = reader.readLine();
+                while (line != null) { // loop through each line
+                    String[] currentLine = line.split(","); //  populates an array with a string that splits each line in file by comma
+                    catalog.add(new Book(currentLine[0], currentLine[1], Boolean.parseBoolean(currentLine[2]))); // creates and adds book object to catalog
+                    line = reader.readLine(); // reads next line and restarts the loop if occupied
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -27,6 +30,7 @@ public class File {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+        return catalog;
     }
 
     public static void writeToFile(Scanner scnr) {
@@ -35,7 +39,7 @@ public class File {
         String bookTitle = scnr.nextLine();
         System.out.println("Please enter the book's author: ");
         String bookAuthor = scnr.nextLine();
-        Book book = new Book(bookTitle, bookAuthor);
+        Book book = new Book(bookTitle, bookAuthor, true);
         Path writePath = Paths.get("books.txt");
         java.io.File bookFiles = writePath.toFile();
 
