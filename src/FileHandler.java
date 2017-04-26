@@ -48,7 +48,6 @@ public class FileHandler {
     }
 
     public static void writeToFile(Scanner scnr) {
-        scnr.nextLine();
         System.out.println("Please enter a book name: ");
         String bookTitle = scnr.nextLine();
         System.out.println("Please enter the book's author: ");
