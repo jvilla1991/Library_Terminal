@@ -4,15 +4,20 @@
 //http://www.cs.colostate.edu/~cs161/Fall12/labs/lab2/libsearch.html
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 /**
  * Created by Saritha on 4/25/2017.
  */
+//create book class
+
 public class Book {
     private String name;
     private String author;
     private String status;
+    private Calendar cal;
 
+//Constructor for name, author,status & calender
 
     public Book(String name, String author, String status) {
         this.name = name;
@@ -20,7 +25,12 @@ public class Book {
         this.status = status;
     }
 
-    //getter and setter
+    public Book(Calendar cal) {
+        this.cal = cal;
+
+    }
+
+//getter and setter
 
     public String getName() {
         return name;
@@ -46,16 +56,23 @@ public class Book {
         this.status = status;
     }
 
-    //overriding
+    public Calendar getCal() {
+        return cal;
+    }
+
+    public void setCal(Calendar cal) {
+        this.cal = cal;
+    }
+
+//overriding
 
     @Override
     public String toString() {
-        return name + "," + author + "," + status;
+        return name + "," + author + "," + status + "," + cal;
     }
 
     //status()
-
-    public void  status() {
+    public void status() {
         if (status.equalsIgnoreCase("true")) {
             System.out.println("This book is checked out.The Due Date is: ");
 
@@ -63,20 +80,19 @@ public class Book {
             System.out.println("On Shelf! Do you want to check out?: ");
         }
 
-
     }
 
-    //finding title of the book
+//finding title of the book
 
-    public ArrayList<Book> findTitle(String title) {
-        for (Book b : findTitle("Title")) {
-            if (b.getName().equalsIgnoreCase(title)) ;
-            return findTitle("Title");
+    public ArrayList<Book> findName(String name) {
+        for (Book b : findName("Name")) {
+            if (b.getName().equalsIgnoreCase(name)) ;
+            return findName("Name");
         }
         return null;
     }
 
-//finging author of the book
+//finding author of the book
 
     public ArrayList<Book> findAuthor(String author) {
         for (Book b : findAuthor("Author")) {
@@ -85,11 +101,6 @@ public class Book {
         }
         return null;
     }
-
-
-
-
-
 }
 
 
