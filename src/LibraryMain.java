@@ -20,7 +20,7 @@ public class LibraryMain {
         Scanner scan = new Scanner(System.in);
         int choice = 1;
         String choice1 = "yes";
-        Book book = new Book("name", "author", true);
+        Book book = new Book("name", "author", "status");
 
 
         /*BookCollection bookCollection = new BookCollection();*/

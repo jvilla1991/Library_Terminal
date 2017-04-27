@@ -1,12 +1,12 @@
-A Game of Thrones,George R. R. Martin,true
-Harry Potter,J.K. Rowling,true
-Martin The Warrior,Brian Jacques,true
-Lord of the Rings,J.R.R. Tolkien,true
-The Elegant Universe,Brian Green,true
-The Bluest Eye,Toni Morrison, true
-My House,Nikki Giovanni, true
-We Should All Be Feminists,Chimamanda Ngozi Adichie, true
-Ponniyen Selvan,Kalki, true
-Thanneer Desam,Vairamuthu, true
-Karuvaachi Kaviyam,Vairamuthu, true
-Udaiyar,Balakumaran, truedf,sd,true
+A Game of Thrones,George R. R. Martin,On shelf,(Calender Date)
+Harry Potter,J.K. Rowling,On shelf,(Calender Date)
+Martin The Warrior,Brian Jacques,On shelf,(Calender Date)
+Lord of the Rings,J.R.R. Tolkien,Out,(Calender Date)
+The Elegant Universe,Brian Green,Out,(Calender Date)
+The Bluest Eye,Toni Morrison, On shelf,(Calender Date)
+My House,Nikki Giovanni,On shelf,(Calender Date)
+We Should All Be Feminists,Chimamanda Ngozi Adichie,On shelf,(Calender Date)
+Ponniyen Selvan,Kalki,On shelf,(Calender Date)
+Thanneer Desam,Vairamuthu,Out,(Calender Date)
+Karuvaachi Kaviyam,Vairamuthu,On shelf,(Celander Date)
+Udaiyar,Balakumaran,On shelf,(Calander Date)
