@@ -8,12 +8,11 @@ import java.util.Scanner;
  * Created by Admin on 4/26/2017.
  */
 public class FileHandler {
-    // private static final String SEP = ",";
     Book book;
+
     public static ArrayList<Book> readFromFile() {
 
         ArrayList<Book> catalog = new ArrayList<Book>(); // new array list
-        //Book book = null;
         Path filePath = Paths.get("books.txt");
         File textFile = filePath.toFile();
         try {
@@ -24,11 +23,11 @@ public class FileHandler {
 
                 while (line != null) { // loop through each line
                     String[] currentLine = line.split(","); //  populates an array with a string that splits each line in file by comma
+
                     catalog.add(new Book(currentLine[0], currentLine[1], currentLine[2])); // creates and adds book object to catalog
                     for (int i = 0; i < catalog.size(); i++) {
                         Book b = catalog.get(i);
                     }
-
                     line = reader.readLine(); // reads next line and restarts the loop if occupied
                 }
             } catch (IOException e) {

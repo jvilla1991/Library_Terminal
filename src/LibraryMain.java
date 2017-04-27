@@ -1,4 +1,5 @@
 
+import java.io.File;
 import java.util.ArrayList;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -21,6 +22,7 @@ public class LibraryMain {
         int choice = 1;
         String choice1 = "yes";
         Book book = new Book("name", "author", "status");
+        ArrayList<Book> readFromFile = FileHandler.readFromFile();
 
         /*BookCollection bookCollection = new BookCollection();*/
 
@@ -41,7 +43,6 @@ public class LibraryMain {
 
             switch (choice){
                 case 1:
-                    ArrayList<Book> readFromFile = FileHandler.readFromFile();
                     for (int i = 0; i < readFromFile.size(); i++) {
                         String b = readFromFile.get(i).getName();
                         String a = readFromFile.get(i).getAuthor();
@@ -52,17 +53,13 @@ public class LibraryMain {
                     break;
 
                 case 2:
-                    break;
-
-                case 3: // NEEDS TO BE PUT IN A METHOD AND ADD VALIDATION
-                    readFromFile = FileHandler.readFromFile();
-                    System.out.println("Enter in an Author keyword: ");
-                    String userKeyword = scan.nextLine();
+                    System.out.println("Enter in an Title keyword: ");
+                    String userNameKeyword = scan.nextLine();
                     for (int i = 0; i < readFromFile.size(); i++) {
-                        String compareAuthor = readFromFile.get(i).getAuthor();
-                        String[] splitter = compareAuthor.split(" ");
+                        String compareName = readFromFile.get(i).getAuthor();
+                        String[] splitter = compareName.split(" ");
                         for (int j = 0; j < splitter.length; j++) {
-                            if (userKeyword.equalsIgnoreCase(splitter[j]))
+                            if (userNameKeyword.equalsIgnoreCase(splitter[j]))
                             {
                                 System.out.println("You searched " + readFromFile.get(i).getName());
                                 System.out.println("Would you like to check it out?");
@@ -71,9 +68,24 @@ public class LibraryMain {
                     }
                     break;
 
+                case 3: // NEEDS TO BE PUT IN A METHOD AND ADD VALIDATION
+                    System.out.println("Enter in an Author keyword: ");
+                    String userAuthorKeyword = scan.nextLine();
+                    for (int i = 0; i < readFromFile.size(); i++) {
+                        String compareAuthor = readFromFile.get(i).getAuthor();
+                        String[] splitter = compareAuthor.split(" ");
+                        for (int j = 0; j < splitter.length; j++) {
+                            if (userAuthorKeyword.equalsIgnoreCase(splitter[j]))
+                            {
+                                System.out.println("You searched " + readFromFile.get(i).getAuthor());
+                                System.out.println("Would you like to check it out?");
+                            }
+                        }
+                    }
+                    break;
+
                 case 4:
                     System.out.println("Choose a book from the list: ");
-                    readFromFile = FileHandler.readFromFile();
                     for (int i = 0; i < readFromFile.size(); i++) {
                         String b = readFromFile.get(i).getName();
                         String a = readFromFile.get(i).getAuthor();
@@ -81,10 +93,10 @@ public class LibraryMain {
                     }
                     int userChoice3 = scan.nextInt() - 1;
                     System.out.println("The status of " + readFromFile.get(userChoice3).getName() + " is " + readFromFile.get(userChoice3).getStatus()); // this line will return the status
+                    scan.nextLine();
                     break;
 
                 case 5:
-                    readFromFile = FileHandler.readFromFile();
                     for (int i = 0; i < readFromFile.size(); i++) {
                         String b = readFromFile.get(i).getName();
                         String a = readFromFile.get(i).getAuthor();
@@ -102,6 +114,7 @@ public class LibraryMain {
                     {
                         System.out.println("Sorry, that book has been checked out. It is due back (DATE)");
                     }
+                    scan.nextLine();
                     break;
 
                 case 6:
@@ -123,6 +136,7 @@ public class LibraryMain {
                         System.out.println("You have successfully checked in " + readFromFile.get(userChoice1).getName() + "! Thank you!");
                         book.setStatus("on shelf");
                     }
+                    scan.nextLine();
                     break;
 
                 case 7:
