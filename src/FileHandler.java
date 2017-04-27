@@ -25,17 +25,11 @@ public class FileHandler {
                 while (line != null) { // loop through each line
                     String[] currentLine = line.split(","); //  populates an array with a string that splits each line in file by comma
 
-                    catalog.add(new Book(currentLine[0], currentLine[1], true)); // creates and adds book object to catalog
-                    //String title = currentLine[0];
-                    //String author = currentLine[1];
-                    //       boolean status = Boolean.parseBoolean(currentLine[2]);
-
-                    //book = new Book(title, author,true);
-                    //catalog.add(book);
+                    catalog.add(new Book(currentLine[0], currentLine[1], currentLine[2])); // creates and adds book object to catalog
                     for (int i = 0; i < catalog.size(); i++) {
                         Book b = catalog.get(i);
-                        //System.out.println(b);
                     }
+                    
                     line = reader.readLine(); // reads next line and restarts the loop if occupied
                 }
             } catch (IOException e) {
@@ -52,7 +46,7 @@ public class FileHandler {
         String bookTitle = scnr.nextLine();
         System.out.println("Please enter the book's author: ");
         String bookAuthor = scnr.nextLine();
-        Book book = new Book(bookTitle, bookAuthor, true);
+        Book book = new Book(bookTitle, bookAuthor, "on shelf");
         Path writePath = Paths.get("books.txt");
         java.io.File bookFiles = writePath.toFile();
 

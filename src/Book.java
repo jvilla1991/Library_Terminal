@@ -3,6 +3,8 @@
 //http://forums.devshed.com/java-help-9/java-library-system-borrow-books-search-books-overdue-books-slight-812178.html
 //http://www.cs.colostate.edu/~cs161/Fall12/labs/lab2/libsearch.html
 
+import java.util.ArrayList;
+
 /**
  * Created by Saritha on 4/25/2017.
  */
@@ -63,6 +65,28 @@ public class Book {
 
 
     }
+
+    //finding title of the book
+
+    public ArrayList<Book> findTitle(String title) {
+        for (Book b : findTitle("Title")) {
+            if (b.getName().equalsIgnoreCase(title)) ;
+            return findTitle("Title");
+        }
+        return null;
+    }
+
+//finging author of the book
+
+    public ArrayList<Book> findAuthor(String author) {
+        for (Book b : findAuthor("Author")) {
+            if (b.getAuthor().equalsIgnoreCase(author)) ;
+            return findAuthor("Author");
+        }
+        return null;
+    }
+
+
 
 
 
