@@ -17,6 +17,8 @@ public class Book {
     private String status;
     private Calendar cal;
 
+    String userKeyword;
+
 //Constructor for name, author,status & calender
 
     public Book(String name, String author, String status) {
@@ -101,6 +103,7 @@ public class Book {
         }
         return null;
     }
+
 }
 
 

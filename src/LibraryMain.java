@@ -1,14 +1,5 @@
 
-import java.io.File;
 import java.util.ArrayList;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.lang.reflect.Array;
-
-import java.util.ArrayList;
-
 import java.util.Scanner;
 
 /**
@@ -41,7 +32,7 @@ public class LibraryMain {
             choice = scan.nextInt();
             scan.nextLine();
 
-            switch (choice){
+            switch (choice) {
                 case 1:
                     for (int i = 0; i < readFromFile.size(); i++) {
                         String b = readFromFile.get(i).getName();
@@ -59,8 +50,7 @@ public class LibraryMain {
                         String compareName = readFromFile.get(i).getAuthor();
                         String[] splitter = compareName.split(" ");
                         for (int j = 0; j < splitter.length; j++) {
-                            if (userNameKeyword.equalsIgnoreCase(splitter[j]))
-                            {
+                            if (userNameKeyword.equalsIgnoreCase(splitter[j])) {
                                 System.out.println("You searched " + readFromFile.get(i).getName());
                                 System.out.println("Would you like to check it out?");
                             }
@@ -68,21 +58,28 @@ public class LibraryMain {
                     }
                     break;
 
+
                 case 3: // NEEDS TO BE PUT IN A METHOD AND ADD VALIDATION
-                    System.out.println("Enter in an Author keyword: ");
-                    String userAuthorKeyword = scan.nextLine();
-                    for (int i = 0; i < readFromFile.size(); i++) {
-                        String compareAuthor = readFromFile.get(i).getAuthor();
-                        String[] splitter = compareAuthor.split(" ");
-                        for (int j = 0; j < splitter.length; j++) {
-                            if (userAuthorKeyword.equalsIgnoreCase(splitter[j]))
-                            {
-                                System.out.println("You searched " + readFromFile.get(i).getAuthor());
-                                System.out.println("Would you like to check it out?");
+
+                        System.out.println("Enter in an Author keyword: ");
+                        String userAuthorKeyword = scan.nextLine();
+                        for (int i = 0; i < readFromFile.size(); i++) {
+                            String compareAuthor = readFromFile.get(i).getAuthor();
+                            String[] splitter = compareAuthor.split(" ");
+                            for (int j = 0; j < splitter.length; j++) {
+                                if (userAuthorKeyword.equalsIgnoreCase(splitter[j])) {
+                                    System.out.println("You searched " + readFromFile.get(i).getAuthor());
+                                    System.out.println("Would you like to check it out? yes or no");
+                                }
+                                /*while (choice1.equalsIgnoreCase("yes")) ;
+                                System.out.println("Thank you!");*/
                             }
-                        }
-                    }
+                            }
+
+
+
                     break;
+
 
                 case 4:
                     System.out.println("Choose a book from the list: ");
@@ -109,8 +106,7 @@ public class LibraryMain {
                     {
                         System.out.println("You have successfully checked out " + readFromFile.get(userChoice).getName() + "! It will be due back by (DATE)");
                         book.setStatus("checked out"); // this is not functional currently. it will update the status of the book to the opposite of checked ot
-                    }
-                    else if (bookStatus.equalsIgnoreCase("checked out")) //however, if the book has been checked out, it will return an error message
+                    } else if (bookStatus.equalsIgnoreCase("checked out")) //however, if the book has been checked out, it will return an error message
                     {
                         System.out.println("Sorry, that book has been checked out. It is due back (DATE)");
                     }
@@ -130,8 +126,7 @@ public class LibraryMain {
                     if (bookStatus1.equalsIgnoreCase("on shelf")) // if it's already on the shelf, it will give an error saying that the user cannot return it.
                     {
                         System.out.println("Sorry, that book is already on the shelf.");
-                    }
-                    else if (bookStatus1.equalsIgnoreCase("checked out")) // however, if it is checkedout it will check it back in
+                    } else if (bookStatus1.equalsIgnoreCase("checked out")) // however, if it is checkedout it will check it back in
                     {
                         System.out.println("You have successfully checked in " + readFromFile.get(userChoice1).getName() + "! Thank you!");
                         book.setStatus("on shelf");
