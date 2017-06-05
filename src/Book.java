@@ -3,6 +3,7 @@
 //http://forums.devshed.com/java-help-9/java-library-system-borrow-books-search-books-overdue-books-slight-812178.html
 //http://www.cs.colostate.edu/~cs161/Fall12/labs/lab2/libsearch.html
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -16,6 +17,7 @@ public class Book {
     private String author;
     private String status;
     private Calendar cal;
+    private String date;
 
     String userKeyword;
 
@@ -103,6 +105,22 @@ public class Book {
         }
         return null;
     }
+
+    //assigning a checkout date
+
+    public String setDate(Calendar cal){
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+        cal = Calendar.getInstance();
+        cal.add(Calendar.DAY_OF_MONTH, 14);
+        date = sdf.format(cal.getTime());
+        return date;
+
+    }
+
+    public String getDate(){
+        return date;
+    }
+
 
 }
 
